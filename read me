@@ -1,0 +1,46 @@
+
+cd pizza_site
+
+python -m venv venv
+
+.\venv\Scripts\Activate
+
+pip install django
+
+python manage.py migrate
+python manage.py runserver
+
+*******launch******
+python manage.py runserver 8080
+
+
+        pizza_site/
+├── manage.py
+├── pizza_site/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   └── asgi.py
+├── menu/
+│   ├── static/
+│   │   └── menu/
+
+│   │       └── style.css
+│   ├── templates/
+│   │   └── menu/
+│   │       └── pizza_list.html
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+└── db.sqlite3
+
+**************** TO RELAUNCH 
+venv\Scripts\activate
+
+
+{% load static %}
+{% extends 'base.html' %}

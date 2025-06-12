@@ -1,0 +1,153 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'menu/style.css' %}">
+
+<div class="header-container">
+    <div class="logo-title">🍕 Aimee's PizzaHub and snacks</div>
+    <a href="{% url 'view_cart' %}" class="cart-link">🛒</a>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+</div>
+
+
+
+<div class="menu-grid">
+
+    <div class="pizza-card">
+        <img src="{% static 'menu/images/Pepperoni.jpg' %}" alt="Pepperoni" class="pizza-image">
+        <h2>Pepperoni Pizza</h2>
+        <p>Delicious pepperoni, melted cheese, and our signature crust!</p>
+        <p>$10.99</p>
+        <form action="{% url 'add_to_cart' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="item_name" value="Pepperoni Pizza">
+            <input type="hidden" name="item_price" value="10.99">
+            <button type="submit" class="add-to-cart-button">Add to Cart</button>
+            
+        </form>
+   
+    </div>
+
+    <div class="pizza-card">
+        <img src="{% static 'menu/images/Margherita.jpg' %}" alt="Margherita" class="pizza-image">
+        <h2>Margherita Pizza</h2>
+        <p> our famous inhouse mozza melted cheese, and our signature crust!</p>
+        <p>$11.99</p>
+        <form action="{% url 'add_to_cart' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="item_name" value="Pepperoni Pizza">
+            <input type="hidden" name="item_price" value="11.99">
+            <button type="submit" class="add-to-cart-button">Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="pizza-card">
+        <img src="{% static 'menu/images/Chicken n veg.jpg' %}" alt="Chicken and Veg" class="pizza-image">
+        <h2>Chicken n' Veg Pizza</h2>
+        <p>Slow roasted chicken, fresh veggies melted cheese, and our signature crust!</p>
+        <p>$14.99</p>
+        <form action="{% url 'add_to_cart' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="item_name" value="Pepperoni Pizza">
+            <input type="hidden" name="item_price" value="14.99">
+            <button type="submit" class="add-to-cart-button">Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="pizza-card">
+        <img src="{% static 'menu/images/BreadedWings.jpg' %}" alt="Breaded Wings" class="pizza-image">
+        <h2>Breaded Wings</h2>
+        <p>breaded wings cooked to perfection by the dozen</p>
+        <p>$12.99</p>
+        <form action="{% url 'add_to_cart' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="item_name" value="Pepperoni Pizza">
+            <input type="hidden" name="item_price" value="12.99">
+            <button type="submit" class="add-to-cart-button">Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="pizza-card">
+        <img src="{% static 'menu/images/HotWings.jpg' %}" alt="Hot Wings" class="pizza-image">
+        <h2>Hot Wings</h2>
+        <p> cooked to perfection and tossed in franks red hot</p>
+        <p>$12.99</p>
+        <form action="{% url 'add_to_cart' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="item_name" value="Pepperoni Pizza">
+            <input type="hidden" name="item_price" value="12.99">
+            <button type="submit" class="add-to-cart-button">Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="pizza-card">
+        <img src="{% static 'menu/images/Fries.jpg' %}" alt="Fries" class="pizza-image">
+        <h2>Fries</h2>
+        <p>deep fried in beef tallow, served piping hot with your choice of ranch,sour cream or sauce</p>
+        <p>$4.99</p>
+        <form action="{% url 'add_to_cart' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="item_name" value="Pepperoni Pizza">
+            <input type="hidden" name="item_price" value="4.99">
+            <button type="submit" class="add-to-cart-button">Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="pizza-card">
+        <img src="{% static 'menu/images/ComboPlatter.jpg' %}" alt="Combo Platter" class="pizza-image">
+        <h2>Combo Platter</h2>
+        <p>An assortment of deep fried goodies with dips </p>
+        <p>$20.99</p>
+        <form action="{% url 'add_to_cart' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="item_name" value="Pepperoni Pizza">
+            <input type="hidden" name="item_price" value="20.99">
+            <button type="submit" class="add-to-cart-button">Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="pizza-card">
+        <img src="{% static 'menu/images/SouthernFriedChicken.jpg' %}" alt="Southern Fried Chicken" class="pizza-image">
+        <h2>Southern Fried Chicken</h2>
+        <p>A southern delight of crispy moist melt in your mouth chicken, our bucket is  way beter than the colonel</p>
+        <p>$25.99</p>
+        <form action="{% url 'add_to_cart' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="item_name" value="Pepperoni Pizza">
+            <input type="hidden" name="item_price" value="25.99">
+            <button type="submit" class="add-to-cart-button">Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="pizza-card">
+        <img src="{% static 'menu/images/Desserts.jpg' %}" alt="Desserts" class="pizza-image">
+        <h2>Desserts</h2><p>Save when you buy 4 or more</p>
+        <p>$4.99</p>
+        <form action="{% url 'add_to_cart' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="item_name" value="Pepperoni Pizza">
+            <input type="hidden" name="item_price" value="4.99">
+            <button type="submit" class="add-to-cart-button">Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="pizza-card">
+        <img src="{% static 'menu/images/Drinks.jpg' %}" alt="Drinks" class="pizza-image">
+        <h2>Drinks</h2> <p>An assortment of soda</p>
+        <p>$1.99</p>
+        <form action="{% url 'add_to_cart' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="item_name" value="Pepperoni Pizza">
+            <input type="hidden" name="item_price" value="1.99">
+            <button type="submit" class="add-to-cart-button">Add to Cart</button>
+        </form>
+    </div>
+
+</div>
+<footer class="footer-container">
+    <a href="{% url 'terms' %}">
+        <button class="terms-button">View Terms & Conditions</button>
+      </a>
+      
+    <p>&copy; 2025 Aimee's pizzahub and snacks. All rights reserved.</p>
+</footer>
+
